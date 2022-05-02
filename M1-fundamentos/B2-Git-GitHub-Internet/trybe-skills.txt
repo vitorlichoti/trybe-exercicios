@@ -5,3 +5,5 @@ O que eu vou aprender na Trybe:
 -Git
 -Data Science
 -Back-end
+-Soft Skills
+-Front-End
