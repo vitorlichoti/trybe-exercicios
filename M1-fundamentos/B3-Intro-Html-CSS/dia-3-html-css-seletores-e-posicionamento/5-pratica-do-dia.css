@@ -1,0 +1,50 @@
+.ordenada {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.par {
+    color: green;
+}
+
+.impar {
+    text-transform: uppercase;
+}
+
+h1, h3 {
+    color: red;
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px black solid;
+}
+
+li {
+    font-size: 20px;
+}
+
+.azul {
+    color: blue;
+}
+
+.rosa {
+    background-color: pink;
+}
+
+.negrito:hover {
+    font-weight: bold;
+}
+
+.laranja:hover {
+    color: orange;
+}
+.verde:hover {
+    color: green;
+}
+.preta:hover {
+    color: black;
+}
+.amarelo:hover {
+    color: yellow;
+}
