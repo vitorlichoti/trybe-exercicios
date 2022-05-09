@@ -1,0 +1,27 @@
+div:hover {
+    border: 2px solid black;
+}
+
+#blue {
+    color: blue;
+    font-style: italic;
+}
+
+#green {
+    color: green;
+}
+
+#orange {
+    color: orange;
+    font-size: 40px;
+    font-style: italic;
+}
+
+#brown {
+    color: brown;
+}
+
+#aqua {
+    color: aqua;
+    font-style: italic;
+}
