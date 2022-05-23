@@ -21,7 +21,10 @@ function createEachDayMonth() {
     const dayOfList = dezNumberList[i];
     const dayCreator = document.createElement('li');
     dayCreator.innerText = dayOfList;
-    dayCreator.className = 'days-list';
+
+    if (dezNumberList[i] === 25) {
+      dayCreator.className = 'days-list';
+    }
 
     numberDaysList.appendChild(dayCreator);
   }
@@ -42,14 +45,16 @@ holidays('Feriados');
 
 function holidaysDisplayChange() {
   const backgroundDefault = '#eee';
-  const newBackground = 'red';
+  const newBackground = 'rgb(153, 255, 153)';
   let getButton = document.getElementById('btn-holiday');
   getButton.addEventListener('click', myFunction);
 
   function myFunction() {
-    let getDaysItems = document.querySelectorAll('.days-list');
+    let getDaysItems = document.getElementsByClassName('days-list');
     for (let i = 0; i < getDaysItems.length; i += 1) {
-      if (document.getElementsByClassName('days-list')[i].style.backgroundColor === backgroundDefault) {
+      if (getDaysItems[i].style.backgroundColor === newBackground) {
+        getDaysItems[i].style.backgroundColor = backgroundDefault;
+      }else {
         getDaysItems[i].style.backgroundColor = newBackground;
       }
     }    
@@ -57,22 +62,3 @@ function holidaysDisplayChange() {
 }
 
 holidaysDisplayChange();
-
-// function changeHolidaysBackground() {
-//   const holidayButton = document.getElementById('btn-holiday');
-//   const getHolidays = document.querySelectorAll('.holidays');
-//   const background = 'rgb(238,238,238)';
-//   const newColor = 'red';
-
-//   holidayButton.addEventListener('click', function(){
-//   for (let i = 0; i < getHolidays.length; i += 1) {
-//     if (getHolidays[i].getElementsByClassName.style.backgroundColor === newColor) {
-//       getHolidays[i].style.backgroundColor = background;
-//     } else {
-//       getHolidays[i].style.backgroundColor = newColor;
-//     }
-//   }
-//   });
-// }
-
-// changeHolidaysBackground();
