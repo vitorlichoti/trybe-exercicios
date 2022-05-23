@@ -62,3 +62,35 @@ function holidaysDisplayChange() {
 }
 
 holidaysDisplayChange();
+
+function sextouu(string) {
+  const btnCreator2 = document.createElement('button');
+  const btnContainer2 = document.getElementsByClassName('buttons-container')[0];
+  btnContainer2.appendChild(btnCreator2);
+  btnCreator2.id = 'btn-friday';
+  btnCreator2.innerText = string;
+
+  const getButton2 = document.getElementById('btn-friday');
+  getButton2.addEventListener('click', myEvent);
+
+  function myEvent(){
+    const getDaysItems2 = document.getElementsByClassName('friday-days-list');
+    for (let i = 0; i < getDaysItems2.length; i += 1)
+      if (getDaysItems2[i].innerText == 4 || getDaysItems2[i].innerText % 7 == 4) {
+        getDaysItems2[i].innerText = 'SEXTOUU!';
+      }
+    }
+}
+
+sextouu('Sexta-feira');
+
+function fridayDaysCreator() {
+  const getFridays = document.getElementsByTagName('li');
+  for (let i = 0; i < getFridays.length; i += 1)
+      if (getFridays[i].innerText == 4 || getFridays[i].innerText % 7 == 4) {
+        getFridays[i].className = 'friday-days-list';
+      }
+}
+
+fridayDaysCreator();
+
