@@ -22,10 +22,6 @@ function createEachDayMonth() {
     const dayCreator = document.createElement('li');
     dayCreator.innerText = dayOfList;
 
-    if (dezNumberList[i] === 25) {
-      dayCreator.className = 'days-list';
-    }
-
     numberDaysList.appendChild(dayCreator);
   }
 }
@@ -50,15 +46,13 @@ function holidaysDisplayChange() {
   getButton.addEventListener('click', myFunction);
 
   function myFunction() {
-    let getDaysItems = document.getElementsByClassName('days-list');
-    for (let i = 0; i < getDaysItems.length; i += 1) {
-      if (getDaysItems[i].style.backgroundColor === newBackground) {
-        getDaysItems[i].style.backgroundColor = backgroundDefault;
+    let getDaysItems = document.getElementById('holiday');
+      if (getDaysItems.style.backgroundColor === newBackground) {
+        getDaysItems.style.backgroundColor = backgroundDefault;
       }else {
-        getDaysItems[i].style.backgroundColor = newBackground;
+        getDaysItems.style.backgroundColor = newBackground;
       }
     }    
-  }
 }
 
 holidaysDisplayChange();
@@ -75,21 +69,30 @@ function sextouu(string) {
 
   function myEvent(){
     const getDaysItems2 = document.getElementsByClassName('friday-days-list');
-    for (let i = 0; i < getDaysItems2.length; i += 1)
+    console.log(getDaysItems2);
+    const defaultValue = [4, 11, 18, 25];
+    for (let i = 0; i < getDaysItems2.length; i += 1){
       if (getDaysItems2[i].innerText == 4 || getDaysItems2[i].innerText % 7 == 4) {
         getDaysItems2[i].innerText = 'SEXTOUU!';
+      } else if (getDaysItems2[i].innerText === 'SEXTOUU!') {
+        getDaysItems2[i].innerText = defaultValue[i];
       }
     }
+  }
 }
 
 sextouu('Sexta-feira');
 
 function fridayDaysCreator() {
   const getFridays = document.getElementsByTagName('li');
-  for (let i = 0; i < getFridays.length; i += 1)
-      if (getFridays[i].innerText == 4 || getFridays[i].innerText % 7 == 4) {
+  for (let i = 0; i < getFridays.length; i += 1){
+      if (getFridays[i].innerText == 4 || getFridays[i].innerText % 7 == 4 && getFridays[i].innerText != 2020) {
         getFridays[i].className = 'friday-days-list';
       }
+      if (getFridays[i].innerText == 25) {
+        getFridays[i].id = 'holiday';
+      }
+  }
 }
 
 fridayDaysCreator();
