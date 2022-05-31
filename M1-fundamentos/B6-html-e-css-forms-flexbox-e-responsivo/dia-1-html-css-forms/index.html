@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Concurso Trybe Trip</h1>
+
+  <form action="">
+    <section class="container">
+      <label for="nome-text">Nome Completo: 
+        <input type="text" name="nome" id="nome-text" required minlength="10" maxlength="40">
+      </label>
+      <br>
+      <label for="email-text">Email: 
+        <input type="email" name="email" id="email-text" required minlength="10" maxlength="50">
+      </label>
+    </section>
+    
+    <section class="container">
+      <p>Destino Preferido:</p>
+      <label>
+        <input type="radio" name="destino" id="op1" value="cidade" class="radio-btn" checked>Cidade
+      </label>
+      <label>
+        <input type="radio" name="destino" id="op2" value="campo" class="radio-btn">Campo
+      </label>
+      <label>
+        <input type="radio" name="destino" id="op3" value="praia" class="radio-btn">Praia
+      </label>
+      <label>
+        <input type="radio" name="destino" id="op4" value="montanhas" class="radio-btn">Montanhas
+      </label>
+    </section>
+
+    <section class="container">
+      <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+      <div><textarea name="text-box" id="text-area" cols="50" rows="10" maxlength="500"></textarea></div>
+      
+    </section>
+    
+    <section class="container">
+      <p>Qual a melhor data para realizar sua viagem?</p>
+      <input type="date" name="date" id="trip-date">
+    </section>
+
+    <section class="container">
+      <p>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</p>
+      <label for="concordo1">Sim!: <input type="checkbox" name="choise1" id="concordo1"></label>
+      <p>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</p>
+      <label for="concordo2">Concordo: <input type="checkbox" name="choise2" id="concordo2"></label>
+    </section>
+
+    <section id="buttons">
+      <button type="submit" id="submit-btn" class="button">Enviar</button>
+      <button type="reset" id="reset-btn" class="button">Apagar</button>
+    </section>
+  </form>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
