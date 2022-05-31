@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+body {
+  background-image: url(./travel-accessories-light-blue-background-getting-ready-summer-vacation-d-rendering-150871769.jpg);
+  margin-left: 48%;
+  margin-top: 40px;
+  text-align: justify;
+  color:cadetblue;
+}
+
+#buttons {
+  display: flex;
+  margin-left: 20%;
+}
+
+.radio-btn {
+  margin-left: 15px;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+div {
+  margin-bottom: 20px
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+}
