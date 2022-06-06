@@ -1,0 +1,137 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 768px){
+  body {
+    margin: 10px 15px;
+    background-color: antiquewhite;
+  }
+
+  h1 {
+    text-align: center;
+    background-color:rgb(150, 150, 129);
+    color: rgb(39, 45, 50);
+    border-radius: 15px;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid rgb(192, 125, 43);
+  }
+  
+  .chapters-container {
+    font-size: 25px;
+  }
+
+  .main-content .text {
+    font-size: 25px;
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  body {
+    margin: 10px 15px;
+    background-color: antiquewhite;
+    padding: 15px;
+  }
+
+  h1 {
+    text-align: center;
+    background-color:rgb(150, 150, 129);
+    color: rgb(39, 45, 50);
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+  }
+
+  h2 {
+    text-align: justify;
+    font-size: 30px;
+    border: 2px solid rgb(192, 125, 43);
+    width:fit-content;
+    padding: 10px;
+  }
+  
+  .chapters-container {
+    font-size: 25px;
+  }
+
+  .main-content .text {
+    font-size: 35px;
+    text-align: justify;
+  }
+
+  .footer-container {
+    font-size: x-large;
+  }
+}
+
+@media screen and (min-width: 1025px){
+  body {
+    margin: 10px 15px;
+    background-color: antiquewhite;
+    padding: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  h1 {
+    text-align: start;
+    width: fit-content;
+    background-color:rgb(150, 150, 129);
+    color: rgb(39, 45, 50);
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  header {
+    
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid rgb(192, 125, 43);
+    width:fit-content;
+    padding: 10px;
+  }
+  
+  .chapters-container {
+    font-size: 25px;
+  }
+
+  .main-content .text {
+    font-size: 20px;
+    text-align: justify;
+    /* margin-left: 10%; */
+    margin-right: 10%;
+  }
+
+  .footer-container {
+    font-size: x-large;
+  }
+}
