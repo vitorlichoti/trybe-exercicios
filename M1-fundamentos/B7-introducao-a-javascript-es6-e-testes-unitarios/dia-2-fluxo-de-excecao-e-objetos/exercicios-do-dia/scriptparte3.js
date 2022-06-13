@@ -47,13 +47,13 @@ objValues(lesson1);
 
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
-console.log(allLessons);
+// console.log(allLessons.lesson1.numeroEstudantes);
 
 //soma o total de estudantes;
 const totalStudents = (class1, class2, class3) => class1.numeroEstudantes + class2.numeroEstudantes + class3.numeroEstudantes;
 
 totalStudents(lesson1, lesson2, lesson3);
-console.log(totalStudents(lesson1, lesson2, lesson3));
+// console.log(totalStudents(lesson1, lesson2, lesson3));
 
 //retorna valor do objeto pelo numero de indice
 const valueKeyByNumber = (obj, index) => {
@@ -63,7 +63,7 @@ const valueKeyByNumber = (obj, index) => {
 
 valueKeyByNumber(lesson1, 0);
 
-console.log(valueKeyByNumber(lesson1, 0));
+// console.log(valueKeyByNumber(lesson1, 0));
 
 //verifica se key/value existem no objeto
 const verifyPair = (obj, key, value) => {
@@ -75,4 +75,50 @@ const verifyPair = (obj, key, value) => {
   return isEqual;
 };
 
-console.log(verifyPair(lesson2,'professor','Carlos'));
+// console.log(verifyPair(lesson2,'professor','Carlos'));
+
+// console.log(allLessons.lesson1.numeroEstudantes);
+
+const studentsCounter = () => allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes;
+
+console.log(studentsCounter());
+
+//Bonus 2 - minha solução:
+// const createReport = (obj, teacher) => {
+//   const listOfEntries = Object.entries(obj);
+//   //verificador de aulas
+//   let classes = [];
+//   let students = 0;
+//   for (let index in listOfEntries) {    
+//     if (listOfEntries[index][1].professor === teacher) {
+//       classes.push(listOfEntries[index][1].materia);
+//       students += listOfEntries[index][1].numeroEstudantes;
+//     }
+//   }
+//   return `{professor: ${teacher}, aulas: [ ${classes} ], estudantes: ${students}}`
+// }
+
+// console.log(createReport(allLessons, 'Carlos'));
+
+//Bonus 2 solução trybe:
+const getInfo = (obj, name) => {
+  const allLessons = [];
+  let allStudent = 0;
+  const array = Object.values(obj);
+  for (index in array) {
+    if (array[index].professor === name) {
+      allLessons.push(array[index].materia)
+      allStudent += array[index].numeroEstudantes;
+    }
+  }
+  return { lessons: allLessons, estudantes: allStudent };
+}
+
+const createReport = (allLessons, name) => {
+  const report = {};
+  report.professor = name;
+  Object.assign(report, getInfo(allLessons, name));
+  return report;
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
