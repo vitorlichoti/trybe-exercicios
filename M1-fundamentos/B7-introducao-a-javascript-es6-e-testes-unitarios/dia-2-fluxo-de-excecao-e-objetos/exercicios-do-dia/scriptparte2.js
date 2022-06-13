@@ -58,12 +58,9 @@ console.log(customerInfo(order));
 
 
 function orderModifier(order) {
-  const newBuyer = order.name = 'Luiz Silva';
-  const pizzas = Object.keys(order.order.pizza);
-  const drinks = order.order.drinks.coke.type;
-  const newTotal = order.payment.total = '50';
-
-  return `Olá ${newBuyer}, o total do seu pedido de ${pizzas[0]}, ${pizzas[1]} e ${drinks} é R$ ${newTotal},00.`;
+  const newClient = order.name = 'Luiz Silva';
+  const newTotal = order.order.pizza.marguerita.price + order.order.pizza.pepperoni.price + order.order.drinks.coke.price;
+  return `"Olá ${newClient}, o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$${newTotal},00."`
 }
 
 orderModifier(order);
