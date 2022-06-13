@@ -113,12 +113,12 @@ const getInfo = (obj, name) => {
   }
   return { lessons: allLessons, estudantes: allStudent };
 }
-console.log(getInfo(allLessons, 'Maria Clara'));
-// const createReport = (allLessons, name) => {
-//   const report = {};
-//   report.professor = name;
-//   Object.assign(report, getInfo(allLessons, name));
-//   return report;
-// }
 
-// console.log(createReport(allLessons, 'Maria Clara'));
+const createReport = (allLessons, name) => {
+  const report = {};
+  report.professor = name;
+  Object.assign(report, getInfo(allLessons, name));
+  return report;
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
