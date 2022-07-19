@@ -1,0 +1,89 @@
+body {
+  background-color: black;
+  color: greenyellow;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  text-align: center;
+  background-image: radial-gradient(circle at 72.95% 50%, #b07a82 0, #ac7380 10%, #a86c7f 20%, #a3647f 30%, #9c5c7e 40%, #94547e 50%, #8b4c7e 60%, #804680 70%, #744282 80%, #673e84 90%, #583d86 100%);
+  border-radius: 10px 20px 10px;
+}
+
+.card {
+  color:rgb(39, 54, 42);
+}
+
+.card:nth-of-type(2n){
+  margin-left: 50%;
+  background-color: #8d7d82;
+  padding: 10px;
+  padding-left: 100px;
+  border-radius: 15px 50px;
+  width: 300px;
+  margin-bottom: 20px;
+  color:rgb(252, 252, 252);
+}
+
+.card:nth-of-type(2n+1){
+  margin-left: 5%;
+  background-color: burlywood;
+  padding: 10px;
+  padding-left: 100px;
+  border-radius: 50px 15px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.card:nth-of-type(2) {
+  background-image: url('./kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card:nth-of-type(2) {
+  background-image: url('./kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card:nth-of-type(3) {
+  background-image: url('./kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.card:nth-of-type(2) {
+  background-image: url('./kisspng-react-javascript-angularjs-ionic-atom-5b154be6947457.3471941815281223426081.png');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.card:nth-of-type(4) {
+  background-image: url('./kisspng-redux-react-javascript-angular-github-5c7d4781b9f025.0379217315517141777616.png');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.img {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
