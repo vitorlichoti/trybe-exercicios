@@ -1,13 +1,17 @@
 body {
-  background-color: black;
-  color: greenyellow;
+  background-image: linear-gradient(225deg, #31484f 0, #314348 8.33%, #303d3f 16.67%, #303737 25%, #2f2f2f 33.33%, #2d2728 41.67%, #2a1e21 50%, #26151c 58.33%, #220c18 66.67%, #1f0116 75%, #1b0015 83.33%, #150014 91.67%, #0d0015 100%);
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: center;
+  color: rgb(61, 51, 91);
   margin-left: 10%;
   margin-right: 10%;
 }
 
 .title {
   text-align: center;
-  background-image: radial-gradient(circle at 72.95% 50%, #b07a82 0, #ac7380 10%, #a86c7f 20%, #a3647f 30%, #9c5c7e 40%, #94547e 50%, #8b4c7e 60%, #804680 70%, #744282 80%, #673e84 90%, #583d86 100%);
+  background-image: linear-gradient(225deg, #98b1b7 0, #97aaae 8.33%, #96a3a4 16.67%, #959b9b 25%, #939292 33.33%, #91888a 41.67%, #8d7d82 50%, #88727c 58.33%, #836978 66.67%, #7d6175 75%, #765a74 83.33%, #6e5574 91.67%, #655174 100%);
+  /* background-image: linear-gradient(225deg, #ebf0d5 0, #e9eaca 8.33%, #e6e2be 16.67%, #e4d9b1 25%, #e2cfa3 33.33%, #e0c495 41.67%, #deb887 50%, #dcac7a 58.33%, #db9f70 66.67%, #db9468 75%, #db8963 83.33%, #db7e61 91.67%, #da7461 100%); */
   border-radius: 10px 20px 10px;
 }
 
@@ -19,7 +23,8 @@ body {
   margin-left: 50%;
   background-color: #8d7d82;
   padding: 10px;
-  padding-left: 100px;
+  padding-left: 30px;
+  padding-right: 90px;
   border-radius: 15px 50px;
   width: 300px;
   margin-bottom: 20px;
@@ -28,7 +33,7 @@ body {
 
 .card:nth-of-type(2n+1){
   margin-left: 5%;
-  background-color: burlywood;
+  background-color: #deb887;
   padding: 10px;
   padding-left: 100px;
   border-radius: 50px 15px;
@@ -86,4 +91,10 @@ body {
       -webkit-transform: rotate(360deg); 
       transform:rotate(360deg); 
   } 
+}
+
+.footer {
+  color: #b5a5aa;
+  border-radius: 100px;
+  margin-top: 149px;
 }
