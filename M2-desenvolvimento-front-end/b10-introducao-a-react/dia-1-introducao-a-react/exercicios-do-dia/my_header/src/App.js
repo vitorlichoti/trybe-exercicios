@@ -6,9 +6,16 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Header />
-      <Content />
-      <Footer />
+      <header>
+        <Header />
+      </header>
+      <main>
+        <Content />
+      </main>      
+      <footer className="footer">
+        <Footer />
+      </footer>
+      
     </div>    
   );
 }
