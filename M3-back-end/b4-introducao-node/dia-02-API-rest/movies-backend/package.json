@@ -1,0 +1,6 @@
+{
+  "main": "src/app",
+  "dependencies": {
+    "express": "4.7"
+  }
+}
