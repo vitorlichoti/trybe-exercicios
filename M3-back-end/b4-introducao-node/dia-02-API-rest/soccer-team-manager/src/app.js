@@ -25,7 +25,10 @@ app.post('/teams', (req, res) => {
   const newTeam = { ...req.body };
   teams.push(newTeam);
 
-  res.status(201).json({ team: newTeam });
+  res.status(201).json({
+    message: 'aoww usuário, deu td certo meu chapa',
+    team: newTeam,
+  });
 });
 
 app.put('/teams/:id', (req, res) => {
