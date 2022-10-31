@@ -123,6 +123,8 @@ describe('Usando o método GET em /chocolates/brand/:brandId para buscar brandId
   });
 });
 
+// exercicios do dia
+
 describe('Usando o método GET em /chocolates/total para retornar o total', function () {
   beforeEach(function () {
     sinon.stub(fs.promises, 'readFile')

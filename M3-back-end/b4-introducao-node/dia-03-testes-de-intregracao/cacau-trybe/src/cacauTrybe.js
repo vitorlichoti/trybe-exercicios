@@ -28,6 +28,8 @@ const getChocolatesByBrand = async (brandId) => {
   return findChocByBrand;
 };
 
+// exercicios do dia
+
 const getTotalChocolates = async () => {
   const cacauTrybe = await readCacauTrybeFile();
   return cacauTrybe.chocolates.length;
