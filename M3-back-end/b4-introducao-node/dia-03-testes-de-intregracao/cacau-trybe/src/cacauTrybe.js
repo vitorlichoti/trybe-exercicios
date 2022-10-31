@@ -16,6 +16,20 @@ const getAllChocolates = async () => {
   return cacauTrybe.chocolates;
 };
 
+const getChocolateById = async (id) => {
+  const cacauTrybe = await readCacauTrybeFile();
+  const findCacauTrybeID = cacauTrybe.chocolates.find((e) => e.id === id);
+  return findCacauTrybeID;
+};
+
+const getChocolatesByBrand = async (brandId) => {
+  const cacauTrybe = await readCacauTrybeFile();
+  const findChocByBrand = cacauTrybe.chocolates.filter((e) => e.brandId === brandId);
+  return findChocByBrand;
+};
+
 module.exports = {
     getAllChocolates,
+    getChocolateById,
+    getChocolatesByBrand,
 };
