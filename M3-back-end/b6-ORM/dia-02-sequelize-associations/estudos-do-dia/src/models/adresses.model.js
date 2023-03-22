@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
     underscored: true,
   });
 
-  Address.associate = (models) => {
-    Address.belongsTo(models.Employee,
+  Address.associate = ({ Employee }) => {
+    Address.belongsTo(Employee,
       { foreignKey: 'employeeId', as: 'employees' });
   };
 
